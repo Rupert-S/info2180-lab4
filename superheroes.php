@@ -64,9 +64,13 @@ $superheroes = [
 ];
 
 ?>
-
+ 
 <ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
+<?php foreach ($superheroes as $superhero):?>
+    <?php if($_GET['heroname'] == $superhero['name'] || $_GET['heroname'] == $superhero['alias']):?>
+        <h3><?= $superhero['alias'];?></h3>
+        <h4><?= $superhero['name'];?></h4>
+        <p><?= $superhero['biography'];?></p>
+    <?php endif;?>
 <?php endforeach; ?>
 </ul>

@@ -12,23 +12,24 @@
     
     <div class="header">
         <header>
-            <h1>Avenger Character Search</h1> 
+            <h1>AVENGER CHARACTER SEARCH</h1> 
         </header>
     </div>
     
-    <form action="" method="post">
-        <div class="form-field">
-          <input type="text" name="name" id="name"/>
-        </div>
-        <button type="button" id="searchBtn" class="btn">Search</button>
+    <form action="http://localhost/info2180-lab4/superheroes.php" method="get">
+        <label>Search by Full Name or Alias</label> 
+        <div class="form-field"> 
+            <input type="text" name="heroname" id="heroname"/>
+            <button type="button" id="searchBtn" class="btn">Search</button>
+        </div> 
     </form>
 
     <div class="content">
-        <main>
-    
-        </main>
+        <h2>Results</h2>
+            <div id="result">
+               
+            </div>
     </div>
-    
     <div class="footer">
         <footer> 
             <p>Copyright &copy; 2020, Rupert Scott</p> 

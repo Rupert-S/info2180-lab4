@@ -1,13 +1,14 @@
 window.onload = function(){
     
     var searchBtn = document.querySelector("button");
+    
     var httpRequest;
 
     searchBtn.addEventListener('click',function(elem){
         elem.preventDefault();
         httpRequest = new XMLHttpRequest();
 
-        var url = "superheroes.php";
+        var url = "http://localhost/info2180-lab4/superheroes.php";
         httpRequest.onreadystatechange = loadHeroes;
         httpRequest.open('GET',url);
         httpRequest.send();
@@ -17,7 +18,8 @@ window.onload = function(){
         if(httpRequest.readyState ===XMLHttpRequest.DONE){
             if(httpRequest.status === 200){
                 var response = httpRequest.responseText;
-                alert(response);
+                console.log(response);
+                document.getElementById('result').innerHTML = response;
             }else{
                 alert('there was a problem')
             }
